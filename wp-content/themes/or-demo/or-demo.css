@@ -5,8 +5,10 @@
 }
 header#masthead {
     padding: 15px 5vw;
-    height: 100vh;
     box-sizing: border-box;
+}
+.site-home header#masthead {
+    height: 100vh;
 }
 
 .main-navigation a {
@@ -158,11 +160,14 @@ main#primary {
     margin: 0 auto;
     width: 100vw;
     max-width: 1680px;
-    padding: 40px 5vw;
+    padding: 0 5vw 40px 5vw;
     background: #ffffff;
     color: #212121;
     font-size: 16px;
     line-height: 16px;
+}
+.site-home main#primary {
+    padding: 40px 5vw;
 }
 
 main#primary article {
@@ -191,7 +196,7 @@ main#primary article {
     border-bottom: 1px solid #e0e0e0;
 }
 
-article p {
+article > p {
     line-height: 1.5rem;
     font-size: 1.1125rem;
     max-width: 960px;
@@ -211,16 +216,19 @@ article .wp-swiper__slide-content > p {
 .wp-block-cover-image {
     margin: 0 -5vw;
     width: 100vw;
+    overflow: hidden;
 }
 .wp-block-cover__inner-container p,
 .wp-block-cover__inner-container p:not(.has-text-color) {
     position: absolute;
     bottom: 0;
+    width: 100%;
     font-size: 1.5rem;
     line-height: 1;
     color: #fff;
     font-family: 'Arvo', sans-serif;
-    margin: 5vh 5vw;
+    padding: 0 5vw;
+    box-sizing: border-box;
 }
 
 header#masthead .wp-swiper,
@@ -235,6 +243,23 @@ article .wp-swiper {
     margin: 0;
     padding: 0;
     width: auto;
+}
+
+#page input[type="button"], #page input[type="reset"], #page input[type="submit"] {
+    background: #212121;
+    color: #f8f8f8;
+    border: 1px solid #212121;
+    font-family: 'Arvo', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+#page input, #page textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #212121;
+    border-radius: 0;
+    color: #212121;
+    padding: 5px;
 }
 
 footer#colophon {
